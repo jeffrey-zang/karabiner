@@ -1,0 +1,69 @@
+{
+  "description": "Option IJKL for arrows + Cmd-Opt-J/K for Ctrl-Tab",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "i",
+        "modifiers": { "mandatory": ["option"] }
+      },
+      "to": [{ "key_code": "up_arrow" }],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "j",
+        "modifiers": { "mandatory": ["option"] }
+      },
+      "to": [{ "key_code": "left_arrow" }],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "k",
+        "modifiers": { "mandatory": ["option"] }
+      },
+      "to": [{ "key_code": "down_arrow" }],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "l",
+        "modifiers": { "mandatory": ["option"] }
+      },
+      "to": [{ "key_code": "right_arrow" }],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "j",
+        "modifiers": {
+          "mandatory": ["command", "option"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "tab",
+          "modifiers": ["control"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "k",
+        "modifiers": {
+          "mandatory": ["command", "option"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "tab",
+          "modifiers": ["control", "shift"]
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}
