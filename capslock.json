@@ -1,0 +1,21 @@
+{
+  "description": "Cmd+Opt+2 = caps lock",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "2",
+        "modifiers": {
+          "mandatory": ["left_command", "left_option"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "caps_lock",
+          "modifiers": []
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}
