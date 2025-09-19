@@ -1,0 +1,84 @@
+{
+  "description": "Map Cmd+Opt+J/K and Ctrl+Tab to Shift+Cmd+[ / ] in Dia Browser",
+  "manipulators": [
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": ["^company\\.thebrowser\\.dia$"],
+          "type": "frontmost_application_if"
+        }
+      ],
+      "from": {
+        "key_code": "k",
+        "modifiers": { "mandatory": ["command", "option"] }
+      },
+      "to": [
+        {
+          "key_code": "open_bracket",
+          "modifiers": ["shift", "command"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": ["^company\\.thebrowser\\.dia$"],
+          "type": "frontmost_application_if"
+        }
+      ],
+      "from": {
+        "key_code": "j",
+        "modifiers": { "mandatory": ["command", "option"] }
+      },
+      "to": [
+        {
+          "key_code": "close_bracket",
+          "modifiers": ["shift", "command"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": ["^company\\.thebrowser\\.dia$"],
+          "type": "frontmost_application_if"
+        }
+      ],
+      "from": {
+        "key_code": "tab",
+        "modifiers": { "mandatory": ["control", "shift"] }
+      },
+      "to": [
+        {
+          "key_code": "open_bracket",
+          "modifiers": ["shift", "command"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": ["^company\\.thebrowser\\.dia$"],
+          "type": "frontmost_application_if"
+        }
+      ],
+      "from": {
+        "key_code": "tab",
+        "modifiers": {
+          "mandatory": ["control"],
+          "optional": ["shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "close_bracket",
+          "modifiers": ["shift", "command"]
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}
